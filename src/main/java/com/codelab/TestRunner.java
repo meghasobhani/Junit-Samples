@@ -12,6 +12,6 @@ public class TestRunner {
 	      System.out.println(result.wasSuccessful());
 	      
 
-	      System.out.println("JUnit version is: " + Version.id());
+
 	   }
 }
