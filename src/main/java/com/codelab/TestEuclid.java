@@ -16,20 +16,12 @@ public class TestEuclid {
 	 public static void setupBeforeTests() throws Exception {
 		 Euclid = new Euclid();
 	 }	 
-	 // Test Exception is handled for negative numbers
-	 /*
-	  Ideally we should throw an user defined exception for negative numbers. 
-	  As the code does not have an user defined exception we have for now caught an illegal argument exception
-	  */	 
+	 
 	 @Test(expected = Exception.class)    //Test for passing zero as arguments, must result in exception
 	 public void testExceptionForZero() throws  Exception{ 
 			 Euclid.gcd(0,0);		
 	 }
-	 @Test(expected = IllegalArgumentException.class)   //Test for passing characters as arguments
-	 public void testIllegalArg() throws Exception
-	 {
-		 Euclid.gcd('A', 'B');
-	 }
+	 
 	 @Test 
 	 public void testNegativeValues() throws Exception   //Test for negative arguments with desired result
 	 {	
@@ -50,6 +42,11 @@ public class TestEuclid {
 	    	int value = (Integer) entry.getValue();
 	    	assertEquals(key, value);	     
 	     }
+	 }
+	 @Test(expected = IllegalArgumentException.class)   //Test for passing characters as arguments
+	 public void testIllegalArg() throws Exception
+	 {
+		 Euclid.gcd('A', 'B');
 	 }
 }
 

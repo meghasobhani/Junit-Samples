@@ -5,8 +5,8 @@ import org.junit.Test;
 public class TestHorner {	
 	 @Test
 	 public void testForPositiveValues() throws Exception{  //Test for passing normal values with desired output 
-		 String[] arr = new String[]{"2","1","1","2","1"};
-	         assertEquals(Horner.solve(arr), 4);
+		 String[] arr = new String[]{"2","1","0","2","1"};
+	         assertEquals(Horner.solve(arr), 3);
 	     }
 	 
 	 @Test(expected = ArrayIndexOutOfBoundsException.class)  //Test for array size less than needed
@@ -25,7 +25,7 @@ public class TestHorner {
 		 String[] arr = new String[]{"3","-1","1","2","3","1"};
 		 assertEquals(Horner.solve(arr),-1);		 
 	 }
-	 @Test(expected = Exception.class)  //Test for passing additional arguments 
+	 @Test(expected = IllegalArgumentException.class)  //Test for passing additional arguments 
 	 public void testForMoreNumberOfArguments() throws Exception{
 		 String[] arr = new String[]{"2","1","1","2","1","1"};
 		 Horner.solve(arr);
