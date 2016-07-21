@@ -52,6 +52,12 @@ public class TestEratosthenes {
 	         assertArrayEquals(key, value);
 	     }
 	 }
+	 @Test(expected = OutOfMemoryError.class)  //Max elements that an int array can contain is (max int range-5)
+	 public void testForVeryLargeValue() throws Exception {
+		Eratosthenes.primes(2147483647);
+		
+	 
+	 }
 	 
 	 
 }
