@@ -44,7 +44,7 @@ public class TestFibonacci {
 	         assertEquals(fibonacci.fib((Integer) entry.getKey()), entry.getValue());
 	     }
 	 }
-	 	 @Test(timeout = 1000)     
+	 @Test(timeout = 1000)     
 	 public void testForLargeValues(){
 		 fibonacci.fib(47);
 		 assertTrue( fibonacci.fib(47)>0);//Argument passed is of type int. Factorial of 47 exceeds range of int and returns negative value.

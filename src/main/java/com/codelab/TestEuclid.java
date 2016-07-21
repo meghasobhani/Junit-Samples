@@ -27,7 +27,7 @@ public class TestEuclid {
 	 {	
 		 assertEquals(Euclid.gcd(-1, -1),1);		
 	 }	
-	 @Test   									//Test for some general values with desired results
+	 @Test   //Test for some general values with desired results
 	 public void testPositiveValues() throws Exception {
 		 hm.put(new int[]{2,2},2);
 		 hm.put(new int[]{7,25},1);
